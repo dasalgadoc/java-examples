@@ -25,7 +25,7 @@ public class Application {
         //lauchVariousExamples();
         //lauchReduceExample();
 
-        lauchParallelExample();
+        //lauchParallelExample();
     }
 
     public static void launchHashSetExamples(){
