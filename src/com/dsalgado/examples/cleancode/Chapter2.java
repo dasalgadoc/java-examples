@@ -35,8 +35,8 @@ public class Chapter2 {
     }
 
     // Clean code
-    private int STATUS_VALUE = 0;
-    private int FLAGGED = 4;
+    private final int STATUS_VALUE = 0;
+    private final int FLAGGED = 4;
 
     private List<int []> gameBoard;
 
@@ -51,8 +51,8 @@ public class Chapter2 {
     // Best way
     class Cell{
 
-        private int STATUS_VALUE = 0;
-        private int FLAGGED = 4;
+        private final int STATUS_VALUE = 0;
+        private final int FLAGGED = 4;
 
         private int[] cell;
 
@@ -92,14 +92,14 @@ public class Chapter2 {
      */
 
     // Bad Code
-    public static void copyChars(char a1[], char a2[]){
+    public static void copyChars(char[] a1, char[] a2){
         for(int i = 0; i < a1.length; i ++){
             a2[i] = a1[1];
         }
     }
 
     // Clean code
-    public static void copyCharsClean(char source[], char destination[]){
+    public static void copyCharsClean(char[] source, char[] destination){
         for(int i = 0; i < source.length; i++){
             destination[i] = source[i];
         }

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApiUser {
-    private Integer ID;
-    private String name;
-    private String lastName;
+    private final Integer ID;
+    private final String name;
+    private final String lastName;
 
-    private List<Invoice> invoices;
+    private final List<Invoice> invoices;
 
     public ApiUser(String name, String lastName) {
 

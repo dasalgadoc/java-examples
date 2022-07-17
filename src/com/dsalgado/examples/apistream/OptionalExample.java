@@ -12,7 +12,7 @@ public class OptionalExample {
 
         Optional<String> resultNotNull = stream.filter(q -> q.equals("Papax")).findFirst();
 
-        System.out.println(resultNotNull.orElse(new String("John Doe")));
+        System.out.println(resultNotNull.orElse("John Doe"));
 
     }
 

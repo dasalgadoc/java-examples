@@ -2,8 +2,8 @@ package com.dsalgado.examples.functional.domain;
 
 public class LamdbaUser {
 
-    private String name;
-    private Integer age;
+    private final String name;
+    private final Integer age;
 
     public LamdbaUser(String name, Integer age){
         if(name.isEmpty()){

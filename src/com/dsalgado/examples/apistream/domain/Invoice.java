@@ -2,7 +2,7 @@ package com.dsalgado.examples.apistream.domain;
 
 public class Invoice {
 
-    private String description;
+    private final String description;
 
     public Invoice(String description){
 

@@ -2,6 +2,7 @@ package com.dsalgado.examples.functional;
 
 import com.dsalgado.examples.functional.domain.LamdbaUser;
 
+import java.util.List;
 import java.util.function.Supplier;
 
 public class LambdaSupplierExample {

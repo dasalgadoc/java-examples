@@ -5,7 +5,7 @@ import com.dsalgado.examples.apps.domain.exceptions.AlreadyExistsOptionException
 import java.util.List;
 
 public class OptionsPrevious {
-    private List<Integer> previousOptions;
+    private final List<Integer> previousOptions;
 
     public OptionsPrevious(OptionNumber optionNumber, List<Integer> previousOptions){
 

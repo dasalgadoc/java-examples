@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class HashSetExample {
 
-    private Set<String> hashSet;
+    private final Set<String> hashSet;
 
     public HashSetExample(Set<String> hs){
         this.hashSet = hs;

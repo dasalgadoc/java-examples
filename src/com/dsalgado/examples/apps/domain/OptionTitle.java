@@ -4,7 +4,7 @@ import com.dsalgado.examples.apps.domain.exceptions.NoEmptiesStringException;
 
 public class OptionTitle {
 
-    private String optionTitle;
+    private final String optionTitle;
 
     public OptionTitle(String optionTitle){
 

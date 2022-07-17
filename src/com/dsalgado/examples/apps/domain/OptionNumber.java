@@ -4,7 +4,7 @@ import com.dsalgado.examples.apps.domain.exceptions.PositiveOptionsException;
 
 public class OptionNumber {
 
-    private Integer optionNumber;
+    private final Integer optionNumber;
 
     public OptionNumber(Integer optionNumber){
 

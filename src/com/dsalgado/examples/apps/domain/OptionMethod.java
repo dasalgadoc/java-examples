@@ -3,7 +3,7 @@ package com.dsalgado.examples.apps.domain;
 import com.dsalgado.examples.apps.domain.exceptions.NoEmptiesStringException;
 
 public class OptionMethod {
-    private String method;
+    private final String method;
 
     public OptionMethod(String method){
 

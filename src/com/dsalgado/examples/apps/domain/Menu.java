@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Menu {
 
-    private List<Option> options;
+    private final List<Option> options;
 
     public Menu(List<Option> options) {
         this.options = options;

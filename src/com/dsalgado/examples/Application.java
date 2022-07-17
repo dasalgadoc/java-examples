@@ -1,12 +1,17 @@
 package com.dsalgado.examples;
 
 import com.dsalgado.examples.apistream.*;
+import com.dsalgado.examples.cleancode.chapter4.EratosthenesSievePrimeGenerator;
+import com.dsalgado.examples.cleancode.chapter4.GeneratePrimes;
+import com.dsalgado.examples.cleancode.chapter4.PrimeGenerator;
 import com.dsalgado.examples.datastructures.HashSetExample;
 import com.dsalgado.examples.functional.*;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+
 
 public class Application {
 
@@ -26,6 +31,21 @@ public class Application {
         //lauchReduceExample();
 
         //lauchParallelExample();
+
+        //System.out.println(EnumExample.GET);
+        //System.out.println(EnumExample.GET.toString());
+
+        int generatePrimes[] = GeneratePrimes.generatePrimes(10);
+        int primeGenerator[] = PrimeGenerator.generatePrimesWithEratosthenesSieve(10);
+        int eratosthenes[] = EratosthenesSievePrimeGenerator.generatePrimes(10);
+
+        Arrays.stream(generatePrimes).forEach(System.out::println);
+        System.out.println("---");
+        Arrays.stream(primeGenerator).forEach(System.out::println);
+        System.out.println("---");
+        Arrays.stream(eratosthenes).forEach(System.out::println);
+
+
     }
 
     public static void launchHashSetExamples(){
@@ -65,6 +85,8 @@ public class Application {
 
         lfe.lambdaFunctionBasic();
         lfe.lambdaBiFunctions();
+
+        lfe.functionExample();
     }
 
     public static void lauchLambdaPredicateExample(){

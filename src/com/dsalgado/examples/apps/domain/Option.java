@@ -4,10 +4,10 @@ import java.util.List;
 
 public class Option {
 
-    private OptionNumber optionNumber;
-    private OptionsPrevious optionPrevious;
-    private OptionTitle optionTitle;
-    private OptionMethod optionMethod;
+    private final OptionNumber optionNumber;
+    private final OptionsPrevious optionPrevious;
+    private final OptionTitle optionTitle;
+    private final OptionMethod optionMethod;
 
     public Option(Integer optionNumber,
                   List<Integer> optionPrevious,

@@ -4,7 +4,7 @@ import com.dsalgado.examples.apps.domain.Menu;
 
 public class CreateMenuService {
 
-    private Menu menu;
+    private final Menu menu;
 
     private CreateMenuService(Menu menu){
         this.menu = menu;
