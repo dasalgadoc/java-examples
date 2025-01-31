@@ -71,7 +71,18 @@ public class Application {
     /// testBigDouble();
     // testNullables();
 
-    threadsExample();
+    // threadsExample();
+    // listTest();
+  }
+
+  public static void listTest() {
+    String listTest = "1111111111";
+    for (int i = 0; i < 10000; i++) {
+      long start = System.nanoTime();
+      ListElements.listElements.contains(listTest);
+      long end = System.nanoTime();
+      System.out.println("Time: " + (end - start) / 1000);
+    }
   }
 
   public static void threadsExample() {
