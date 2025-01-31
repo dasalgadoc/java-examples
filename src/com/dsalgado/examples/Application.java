@@ -1,6 +1,8 @@
 package com.dsalgado.examples;
 
 import com.dsalgado.examples.apistream.*;
+import com.dsalgado.examples.cypher.AESGCMVanillaCypher;
+import com.dsalgado.examples.cypher.Cypher;
 import com.dsalgado.examples.datastructures.HashSetExample;
 import com.dsalgado.examples.functional.*;
 import com.dsalgado.examples.threads.MyCustomThreadRunnable;
@@ -24,6 +26,20 @@ import java.util.stream.Stream;
 public class Application {
 
   public static void main(String[] args) {
+    Cypher cypher = new AESGCMVanillaCypher();
+    // 2️⃣ Cifrar un mensaje
+    String message = "Este es un mensaje ultra secreto 🚀";
+    System.out.println("📩 Mensaje: " + message);
+    System.out.println("Is encrypted: " + cypher.isEncrypted(message));
+
+    String encryptedText = cypher.encrypt(message);
+    System.out.println("🔒 Cifrado: " + encryptedText);
+    System.out.println("Is encrypted: " + cypher.isEncrypted(encryptedText));
+
+    String decryptedMessage = cypher.decrypt(encryptedText);
+    System.out.println("🔓 Descifrado: " + decryptedMessage);
+    System.out.println("Is encrypted: " + cypher.isEncrypted(decryptedMessage));
+
     // launchHashSetExamples();
     // lauchLambdaConsumerExample();
     // lauchLambdaSupploerExample();

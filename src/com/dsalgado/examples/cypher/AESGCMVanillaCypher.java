@@ -36,8 +36,30 @@ public class AESGCMVanillaCypher implements Cypher {
 
   @Override
   public boolean isEncrypted(String text) {
+    try {
+      // Verificar si la cadena es un Base64 válido
+      byte[] decodedBytes = Base64.getDecoder().decode(text);
+      // Verificar la longitud mínima esperada
+      // El texto cifrado debe contener: nonce (12 bytes) + texto cifrado (al menos 1 byte) + tag
+      // (16 bytes) - La longitud mínima es de 29 bytes
+      if (decodedBytes.length < GCM_IV_LENGTH + 1 + GCM_TAG_LENGTH / 8) {
+        return false;
+      }
 
-    return false;
+      // Verificar si los primeros bytes podrían ser un nonce válido
+      // (No hay una forma directa de validar el nonce, pero podemos verificar la longitud)
+      byte[] iv = Arrays.copyOfRange(decodedBytes, 0, GCM_IV_LENGTH);
+
+      if (iv.length != GCM_IV_LENGTH) {
+        return false;
+      }
+
+      // Si pasa todas las verificaciones, asumimos que está cifrado
+      return true;
+    } catch (IllegalArgumentException e) {
+      // Si no es un Base64 válido, no está cifrado
+      return false;
+    }
   }
 
   @Override
